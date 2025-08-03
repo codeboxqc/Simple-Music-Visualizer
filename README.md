@@ -1,63 +1,55 @@
-# 🎵 Simple Music Visualizer
+🎵 Simple Music Visualizer
+A real-time audio visualizer built with SDL2, SDL2_gfx, and Windows Core Audio API. Captures system audio and displays frequency bars and beat-reactive visuals with a dynamic plasma color palette for vibrant, music-synchronized animations.
+🧰 Features
 
-A real-time audio visualizer built with **SDL2**, **SDL2_gfx**, and **Windows Core Audio API**. Captures system audio and displays frequency bars and beat-reactive visuals.
+Mono Audio Capture: Real-time system audio capture using Windows Core Audio APIs.
+Spectrum-Based Bar Animation: Displays frequency bars that react to audio input, enhanced with a plasma color palette ("Ice and Frost" or "Neon Dreams") for visually striking effects.
+Beat & Amplitude Detection: Visuals pulse with the music’s beat and amplitude.
+GPU-Accelerated Rendering: Leverages SDL2 for smooth, hardware-accelerated graphics.
+Simulation Mode: Fallback mode with dummy animations if audio capture is unavailable.
+Customizable Visuals: Supports keyboard controls and potential web-based control via an HTML interface.
 
----
+🛠 Prerequisites & Installation
+Before building and running the project, ensure the following are installed and configured:
+1. Visual Studio 2022
 
-## 🧰 Features
-- mono version
-- Realtime system audio capture
-- Spectrum-based bar animation
-- Beat & amplitude detection
-- GPU-accelerated rendering via SDL2
-- Simulation mode fallback if audio capture fails
+Install Visual Studio 2022 with the Desktop development with C++ workload.
+Ensure CMake support is included for project configuration.
 
-## 🛠 Prerequisites & Installation
+2. vcpkg (C++ Package Manager)
+We use vcpkg to manage SDL2 and SDL2_gfx dependencies easily.
+a. Clone and Bootstrap vcpkg
+Open PowerShell or Command Prompt and run:
 
-Before building and running the project, make sure you have the following installed and configured:
-
----
-Running the Visualizer
-Run the compiled executable (F5 or Ctrl + F5 in Visual Studio).
-The visualizer uses Windows Core Audio APIs for system audio capture. Make sure your default playback device supports loopback recording.
-
-If audio capture is unavailable or unsupported, the program falls back to simulation mode to display a dummy animation.
-
-Tested on Windows 10 and 11 with Visual Studio 2022.
-
-Play some audio on your system (music, YouTube, etc.).
-
-The visualizer will display frequency bars reacting to system audio.
-
-Use keyboard controls:
-
-SPACE: Print debug audio info to console
-
-ESC: Quit the application
+git clone https://github.com/microsoft/vcpkg.git
+cd vcpkg
+.\bootstrap-vcpkg.bat
+.\vcpkg install sdl2:x64-windows sdl2-gfx:x64-windows
+.\vcpkg integrate install
 
 
-### 1. Visual Studio 2022
-
-- Download and install [Visual Studio 2022 Community Edition](https://visualstudio.microsoft.com/vs/)
-- During installation, select the **Desktop development with C++** workload to get the required C++ toolchain and Windows SDK.
+ 
 
  
 ![Untitled](https://github.com/user-attachments/assets/fc4b78d9-5fa8-456c-9f23-167a186404b8)
 
 
-### 2. vcpkg (C++ Package Manager)
+🚀 Running the Visualizer
 
-We use **vcpkg** to manage SDL2 and SDL2_gfx dependencies easily.
+Run the compiled executable (e.g., build\Release\visualizer.exe or press F5 in Visual Studio).
+Play audio on your system (e.g., music, YouTube, Spotify).
+The visualizer displays frequency bars that react to the audio, using a plasma color palette that alternates between "Ice and Frost" (cool blues) and "Neon Dreams" (vibrant greens/pinks) for dynamic effects.
+If audio capture fails, the program falls back to simulation mode, showing animated bars with dummy data.
 
-#### a. Clone and bootstrap vcpkg
+Keyboard Controls
 
-Open **PowerShell** or **Command Prompt** and run:
+SPACE: Print debug audio info (e.g., amplitude, beat intensity) to the console.
+C: Cycle through visualization curve types.
+ESC: Quit the application.
 
-```bash
-git clone https://github.com/microsoft/vcpkg.git
-cd vcpkg
-.\bootstrap-vcpkg.bat
-.\vcpkg install sdl2 sdl2-gfx
-.\vcpkg integrate install
+Visualizer Features
+
+Plasma Color Palette: The spectrum bars use a modified plasma palette, randomly selecting between "Ice and Frost" (index 0) and "Neon Dreams" (index 5) for smooth color transitions. The bars’ hue, saturation, and brightness adjust dynamically based on audio input and beat detection.
+Audio-Reactive Animation: Bar heights and colors respond to audio frequencies and amplitude, enhanced by beat detection for rhythmic pulsing.
 
 
