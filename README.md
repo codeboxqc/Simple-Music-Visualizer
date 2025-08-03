@@ -41,7 +41,8 @@ ESC: Quit the application
 - Download and install [Visual Studio 2022 Community Edition](https://visualstudio.microsoft.com/vs/)
 - During installation, select the **Desktop development with C++** workload to get the required C++ toolchain and Windows SDK.
 
----![Untitled](https://github.com/user-attachments/assets/1c4ac801-2899-4294-a177-6ec6caaeac78)
+ 
+![Untitled](https://github.com/user-attachments/assets/fc4b78d9-5fa8-456c-9f23-167a186404b8)
 
 
 ### 2. vcpkg (C++ Package Manager)
