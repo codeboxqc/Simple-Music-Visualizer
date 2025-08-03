@@ -53,3 +53,10 @@ Plasma Color Palette: The spectrum bars use a modified plasma palette, randomly 
 Audio-Reactive Animation: Bar heights and colors respond to audio frequencies and amplitude, enhanced by beat detection for rhythmic pulsing.
 
 
+===================================
+The command "COPY /Y "I:\transfert\Simple-Music-Visualizer-master\visualizer\Lib\x64\*.dll" "I:\transfert\Simple-Music-Visualizer-master\x64\Debug\*.dll"
+
+ 
+ 
+
+
