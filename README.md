@@ -2,6 +2,10 @@
 A real-time audio visualizer built with SDL2, SDL2_gfx, and Windows Core Audio API. Captures system audio and displays frequency bars and beat-reactive visuals with a dynamic plasma color palette for vibrant, music-synchronized animations.
 🧰 Features
 
+
+https://github.com/user-attachments/assets/0d7bcb08-a369-4069-bacf-157bc6126fef
+
+
 Mono Audio Capture: Real-time system audio capture using Windows Core Audio APIs.
 Spectrum-Based Bar Animation: Displays frequency bars that react to audio input, enhanced with a plasma color palette ("Ice and Frost" or "Neon Dreams") for visually striking effects.
 Beat & Amplitude Detection: Visuals pulse with the music’s beat and amplitude.
